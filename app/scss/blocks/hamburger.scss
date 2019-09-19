@@ -1,0 +1,130 @@
+
+.hamburger__menu-data {
+  position: absolute;
+  width: 1.875rem;
+  height: 1.875rem;
+  top: 1.9rem;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+
+  @include tablets {
+    display: flex;
+  }
+}
+.hamburger__menu{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  @include tablets {
+    display: block;
+  }
+}
+.hamburger__menu-item {
+  width: 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  position: relative;
+}
+.hamburger__menu-item:before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: -2px;
+  width: 1.25rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.hamburger__menu-item:after {
+  position: absolute;
+  content: "";
+  bottom: 7px;
+  right: -2px;
+  width: 1.25rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.fs-menu {
+  display: flex;
+  position: absolute;
+  top: -624.9375rem;
+  right: -2.6%;
+  left: -2.6%;
+  height: 68.75rem;
+  background-color: #303436;
+  opacity: 0.99;
+  justify-content: center;
+  transition: 0.3s;
+}
+.fs-menu__list {
+  margin-top: rem(150px);
+  // height: 31.25rem;
+  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+}
+
+.fs-menu__list-link {
+  font-family: "Ubuntu";
+  // line-height: 4.5rem;
+  padding: 1.5rem;
+  font-size: rem(24px);
+  color: #fff;
+  transition: all 0.5s;
+
+  &:hover{
+    color: red;
+    // background-color: #666b6d;
+  }
+}
+.fs-menu__list-item {
+  position: relative;
+  padding: 1.5rem;
+  
+  &::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    &::before:last-child {
+      display: none;
+    }
+  }
+}
+
+.hamburger__menu {
+  &.active {
+    .hamburger__menu-item {
+      border: unset;
+    }
+
+    .hamburger__menu-item:before {
+      top: -2px;
+      transform: rotate(-45deg);
+    }
+
+    .hamburger__menu-item:after {
+      bottom: -2px;
+      transform: rotate(45deg);
+    }
+
+    .fs-menu {
+      top: 0;
+    }
+  }
+}
