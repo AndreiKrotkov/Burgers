@@ -27,44 +27,44 @@ task('clean', () => {
   });
 
 task("copy:html", () => {
-    return src('app/*.html')
+    return src('src/*.html')
       .pipe(dest('dist'))
       .pipe(reload({stream: true}));
 });
 
 task("copy:img", () => {
-  return src('app/img/**/*.+(png|jpg|jpeg)')
+  return src('src/img/**/*.+(png|jpg|jpeg)')
     .pipe(dest('dist/images/img'))
     .pipe(reload({stream: true}));
 });
 
 task("fonts", () => {
-  return src('app/fonts/**/*')
+  return src('src/fonts/**/*')
   .pipe(dest('dist/fonts'))
 });
 
 task("svg", () => {
-  return src('app/img/sprite/*.svg')
+  return src('src/img/sprite/*.svg')
   .pipe(dest('dist/sprite'))
 });
 task("svgIcon", () => {
-  return src('app/img/icons/*.svg')
+  return src('src/img/icons/*.svg')
   .pipe(dest('dist/images/icon'))
 });
 
 task("fullPageCss", () => {
-  return src('app/fullpagecss/*.css')
+  return src('src/fullpagecss/*.css')
   .pipe(dest('dist'))
 });
 task("fullPageJs", () => {
-  return src('app/fullpagejs/*.js')
+  return src('src/fullpagejs/*.js')
   .pipe(dest('dist'))
 });
 
 
 const styles = [
   'node_modules/normalize.css/normalize.css',
-  'app/scss/main.scss'
+  'src/scss/main.scss'
 ];
 
 task('styles', () => {
@@ -87,7 +87,7 @@ task('styles', () => {
 
 const libs = [
   'node_modules/jquery/dist/jquery.js',
-  'app/js/*.js'
+  'src/js/*.js'
  ];
 
 task('script', () => {
@@ -104,7 +104,7 @@ task('script', () => {
 })
 
 // task('icons', () => {
-//   return src('app/img/icons/*.svg')
+//   return src('src/img/icons/*.svg')
 //   .pipe(svgo({
 //     plugins: [
 //       {
@@ -134,10 +134,10 @@ task('server', function() {
 });
 
 task('watch', () => {
-  watch('app/scss/**/*.scss', series('styles'));
-  watch('app/**/*.html', series('copy:html'));
-  watch('app/js/*.js', series('script'));
-  // watch('app/img/icons/*.svg', series('icons'));
+  watch('src/scss/**/*.scss', series('styles'));
+  watch('src/**/*.html', series('copy:html'));
+  watch('src/js/*.js', series('script'));
+  // watch('src/img/icons/*.svg', series('icons'));
  });
   
   
