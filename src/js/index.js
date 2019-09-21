@@ -1,10 +1,11 @@
 const links = document.querySelectorAll("[href^='#']");
-const V = 0.2;
+const V = 0.1;
 
 const overlayHamb = document.querySelector("#hamburgerOverlay");
 const hamburgerMenu = document.querySelector("#burger-link");
 const classes = ["open", "active"];
 const elements = [hamburgerMenu, overlayHamb];
+const body = document.querySelector('#body');
 
 const _toggleClass = (element, className) => {
   element.forEach((item, index) => item.classList.toggle(className[index]));
@@ -12,7 +13,8 @@ const _toggleClass = (element, className) => {
 
 hamburgerMenu.addEventListener("click", e => {
   e.preventDefault();
-
+  console.log('body: overfol hidd');
+  body.classList.toggle('active');
   _toggleClass(elements, classes);
 });
 

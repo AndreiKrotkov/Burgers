@@ -21,7 +21,6 @@
   padding: 4%;
 }
 
-
 .burgers{
   background-image: url('../images/img/burger-background.jpg');
   background-position: center;
@@ -53,6 +52,7 @@
 .burgers__title {
   margin: 0 0 rem(40px) 0;
   line-height: 0.9;
+  text-align: center;
 }
 .burger__item {
   &:hover {
@@ -66,16 +66,10 @@
     }
   }
 }
-.burgers__title {
-  text-align: center;
-}
-.br-title {
-  text-align: left;
+// .burgers__title {
+  
+// }
 
-  @include tablets {
-    text-align: center;
-  }
-}
 .burgers__text {
   font-family: "Ubuntu-Light";
   font-size: rem(14px);
@@ -122,12 +116,12 @@
   transition: all 0.3s;
 
   @include tablets {
-    top: -4.4875rem;
+    top: -5.4875rem;
     left: 1.1875rem;
   }
 
   @include phones {
-    top: -4.4875rem;
+    top: -5.4875rem;
     left: 1.1875rem;
   }
 }

@@ -1,8 +1,6 @@
 .slogan {
   align-items: center;
-  margin-bottom: 13%;
   display: flex;
-  height: -webkit-fill-available;
 
   @include tablets {
     flex-direction: column;

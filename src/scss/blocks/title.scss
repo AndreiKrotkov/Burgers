@@ -31,3 +31,12 @@
     margin-bottom: 10%;
   }
 }
+
+.br-title {
+  text-align: left;
+  font-size: 3.5rem;
+
+  @include tablets {
+    text-align: center;
+  }
+}

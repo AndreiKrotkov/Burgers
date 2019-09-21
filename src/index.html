@@ -9,12 +9,7 @@
 
 	<title>Burgers</title>
 </head>
-<body>
-
-
-
-
-	
+<body id="body">
 		<div class="wrapper">
 			<div id="fullpage">
 				<section class="section hero" id="hero">
@@ -33,12 +28,12 @@
 								<nav class="nav">
 									<ul class="nav__list">
 										<li class="nav__item">
-											<a href="" class="nav__link">
+											<a href="#hero" class="nav__link">
 												о нас
 											</a>
 										</li>
 										<li class="nav__item">
-											<a href="" class="nav__link">
+											<a href="#burgers" class="nav__link">
 												бургеры
 											</a>
 										</li>
@@ -115,9 +110,7 @@
 									</div>
 									<div class="best__text">
 										<p>
-											Драма представляет собой деструктивный цикл. 
-											Анапест представляет собой анапест. 
-											Ямб неравномерен
+											Наисвежайшее мясо из мраморной говядины в пряном соусе пачули.
 										</p>
 									</div>
 								</div>
@@ -132,9 +125,7 @@
 									</div>
 									<div class="best__text">
 										<p> 
-											Драма представляет собой деструктивный цикл. 
-											Анапест представляет собой анапест. 
-											Первое полустишье притягивает сюжетный реформатовский пафос.
+											Наиручнейшая сборка предоставляет добиться наилучшего качества.
 										</p>
 									</div>
 								</div>
@@ -149,8 +140,7 @@
 									</div>
 									<div class="best__text">
 										<p>
-											Драма представляет собой деструктивный цикл. 
-											Анапест представляет собой анапест. 
+											Наинатуральнейшие ингридиенты используются в нашем бургере, отличный вкус!
 										</p>
 									</div>
 								</div>
@@ -410,7 +400,7 @@
 												</div>
 												<div class="burgers__btn">
 													<a href="#" class="btn">
-														Наказать!
+														Заказать
 													</a>
 												</div>
 											</div>
@@ -507,7 +497,7 @@
 												<div class="burger__kkal">
 													<div class="burger__kkal-number">
 														<p>
-															1200
+															1300
 														</p>
 													</div>
 													<div class="burger__kkal-text">
@@ -535,7 +525,7 @@
 												</div>
 												<div class="burgers__btn">
 													<a href="#" class="btn">
-														Наказать!
+														Заказать!
 													</a>
 												</div>
 											</div>
@@ -632,7 +622,7 @@
 												<div class="burger__kkal">
 													<div class="burger__kkal-number">
 														<p>
-															1200
+															1850
 														</p>
 													</div>
 													<div class="burger__kkal-text">
@@ -660,7 +650,7 @@
 												</div>
 												<div class="burgers__btn">
 													<a href="#" class="btn">
-														Наказать!
+														Заказать!
 													</a>
 												</div>
 											</div>
@@ -795,10 +785,6 @@
 						<h4 class="menu-accordeon__subtitle">Для мясоедов</h4>
 						</div>
 						<div class="menu-accordeon__content">
-						<a href="#" class="menu-accordeon__close">
-							<img src=".images/img/close.png" alt="close"
-							class="menu-accordeon__close-img">
-						</a>
 						<div class="menu-accordeon__text">
 							<p>Речевой акт редуцирует диалектический характер. Развивая
 							эту тему, заимствование редуцирует конструктивный механизм
@@ -823,10 +809,6 @@
 						<h4 class="menu-accordeon__subtitle">Вегетарианское</h4>
 						</div>
 						<div class="menu-accordeon__content">
-						<a href="#" class="menu-accordeon__close">
-							<img src="./images/img/close.png" alt="close"
-							class="menu-accordeon__close-img">
-						</a>
 						<div class="menu-accordeon__text">
 							<p>Речевой акт редуцирует диалектический характер. Развивая
 							эту тему, заимствование редуцирует конструктивный механизм
@@ -851,10 +833,6 @@
 						<h4 class="menu-accordeon__subtitle">Диетическое</h4>
 						</div>
 						<div class="menu-accordeon__content">
-						<a href="#" class="menu-accordeon__close">
-							<img src="./images/img/close.png" alt="close"
-							class="menu-accordeon__close-img">
-						</a>
 						<div class="menu-accordeon__text">
 							<p>Речевой акт редуцирует диалектический характер. Развивая
 							эту тему, заимствование редуцирует конструктивный механизм
@@ -1225,6 +1203,7 @@
 					</footer> 
 				</section>
 			</div>	
+			
 			<!-- -----------------Section fixed-menu-------------- -->
 			<ul class="fixed-menu">
 				<li class="fixed-menu__item">
@@ -1245,9 +1224,6 @@
 				<li class="fixed-menu__item ">
 					<a href="#map" class="fixed-menu__link"></a>
 				</li>
-				<!-- <li class="fixed-menu__item ">
-					<a href="" class="fixed-menu__link"></a>
-				</li> -->
 			</ul>
 			<!-- ---------------Section hamburger---------------- -->
 			
@@ -1257,23 +1233,23 @@
 				</a>
 				<div class="fs-menu" >
 					<ul class="fs-menu__list">
-						<li class="fs-menu__list-item">
-						<a href="#hero" class="fs-menu__list-link">О нас</a>
+						<li class="fs-menu__item">
+						<a href="#hero" class="fs-menu__link">О нас</a>
 						</li>
-						<li class="fs-menu__list-item">
-						<a href="#burgers" class="fs-menu__list-link">Бургеры</a>
+						<li class="fs-menu__item">
+						<a href="#burgers" class="fs-menu__link">Бургеры</a>
 						</li>
-						<li class="fs-menu__list-item">
-						<a href="#team" class="fs-menu__list-link">Команда</a>
+						<li class="fs-menu__item">
+						<a href="#team" class="fs-menu__link">Команда</a>
 						</li>
-						<li class="fs-menu__list-item">
-						<a href="#menu" class="fs-menu__list-link">Меню</a>
+						<li class="fs-menu__item">
+						<a href="#menu" class="fs-menu__link">Меню</a>
 						</li>
-						<li class="fs-menu__list-item">
-						<a href="#comments" class="fs-menu__list-link">Отзывы</a>
+						<li class="fs-menu__item">
+						<a href="#comments" class="fs-menu__link">Отзывы</a>
 						</li>
-						<li class="fs-menu__list-item">
-						<a href="#map" class="fs-menu__list-link">Контакты</a>
+						<li class="fs-menu__item">
+						<a href="#map" class="fs-menu__link">Контакты</a>
 						</li>
 					</ul>
 				</div>

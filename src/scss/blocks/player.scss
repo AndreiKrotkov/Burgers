@@ -10,16 +10,16 @@
   }
 }
 
-.player__splash {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/bg/player-splash.jpg") center center / cover no-repeat;
-  cursor: pointer;
-}
+// .player__splash {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: url("../img/bg/player-splash.jpg") center center / cover no-repeat;
+//   cursor: pointer;
+// }
 
 .player__wrapper {
   position: relative;
@@ -47,19 +47,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 25px;
+  padding: 0 2%;
 }
 
 .player__start {
   width: 0;
   height: 0;
   border: 11px solid transparent;
-  border-left-color: #626262;
+  border-left-color: #d80808;
   padding: 0;
   border-right-width: 0;
   background: transparent;
   outline: none;
   position: relative;
+  margin: 0 10px 0 10px;
 
   &.paused {
     width: 14px;
@@ -73,7 +74,7 @@
       width: 5px;
       top: 0;
       bottom: 0;
-      background: #626262;
+      background: #eb0202;
     }
     &:after {
       right: 0;
@@ -86,8 +87,12 @@
 
 .player__playback {
   height: 16px;
-  width: 446px;
+  width: 60%;
   position: relative;
+
+  @include phones {
+  width: 50%;
+  }
 
   &:before {
     content: "";
@@ -96,14 +101,14 @@
     top: 50%;
     left: 0;
     right: 0;
-    background: #626262;
+    background: #bbb4b4c4;
     display: block;
     transform: translateY(-50%);
   }
 }
 
 .player__playback-button {
-  background: #626262;
+  background: #d40505;
   border-radius: 50px;
   border: none;
   width: 12px;
@@ -116,6 +121,10 @@
 }
 
 .player__duration {
-  color: #626262;
+  color: #aca7a7;
   font-weight: bold;
+
+  @include phones {
+    font-size: 12px;
+  }
 }

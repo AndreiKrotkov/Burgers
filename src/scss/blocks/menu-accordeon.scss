@@ -138,14 +138,14 @@
   transition: max-width 0.6s;
 }
 
-.menu-accordeon__close {
-  display: none;
-  position: absolute;
-  z-index: 100;
-  right: 3%;
-  top: 3%;
-  display: none;
-}
+// .menu-accordeon__close {
+//   display: none;
+//   position: absolute;
+//   z-index: 100;
+//   right: 3%;
+//   top: 3%;
+//   display: none;
+// }
 
 .menu-accordeon__text {
   position: absolute;
@@ -156,8 +156,8 @@
   padding: rem(55px) rem(34px);
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity 4s cubic-bezier(0.645, 0.045, 0.355, 1),
-    transform 3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   @include phones {
     padding: rem(75px) rem(15px);

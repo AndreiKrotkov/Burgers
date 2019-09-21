@@ -15,7 +15,17 @@
   justify-content: center;
   align-items: center;
   margin: 0 5px 0 0;
+
+  @include tablets {
+    display: none
+  }
+
+  @include phones{
+    display: none
+    
+  }
 }
+
 
 .person__arrow {
   width: 8px;
