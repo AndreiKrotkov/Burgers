@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 body {
-
+  height: 100%;
   &.active{
     overflow: hidden;
   }
-  
-}
 
+}
+.maincontent{
+  height: 100%;
+  // transform: translateY(-104%);
+  transition: transform 1s;
+}
 button,
 input,
 optgroup,
@@ -30,6 +34,7 @@ textarea {
 
 html {
   font-size: 16px;
+  height: 100%;
 
   @include tablets {
     font-size: 15px;
@@ -53,6 +58,7 @@ li {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  // overflow: hidden;
+  height: 100%;
+  overflow: hidden;
+  // display: none;
 }

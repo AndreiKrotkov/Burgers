@@ -53,11 +53,11 @@ task("svgIcon", () => {
 });
 
 task("fullPageCss", () => {
-  return src('src/fullpagecss/*.css')
+  return src('src/fullpage.min.css')
   .pipe(dest('dist'))
 });
 task("fullPageJs", () => {
-  return src('src/fullpagejs/*.js')
+  return src('src/fullpage.js')
   .pipe(dest('dist'))
 });
 

@@ -5,14 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <link rel="stylesheet" href="./css/normalize.css"> -->
 	<link rel="stylesheet" href="main.min.css">
-	<link rel="stylesheet" type="text/css" href="fullpage.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="fullpage.min.css" /> -->
 
 	<title>Burgers</title>
 </head>
 <body id="body">
 		<div class="wrapper">
-			<div id="fullpage">
-				<section class="section hero" id="hero">
+			<div id="fullpage" class="maincontent">
+				<section class="section hero active" id="hero">
 					<div class="container section-header__content">
 						<header class="header ">
 							<div class="header__logo">
@@ -28,37 +28,37 @@
 								<nav class="nav">
 									<ul class="nav__list">
 										<li class="nav__item">
-											<a href="#hero" class="nav__link">
+											<a href="#hero" class="nav__link" data-scroll-to="1">
 												о нас
 											</a>
 										</li>
 										<li class="nav__item">
-											<a href="#burgers" class="nav__link">
+											<a href="#burgers" class="nav__link" data-scroll-to="2">
 												бургеры
 											</a>
 										</li>
 										<li class="nav__item">
-											<a href="" class="nav__link">
+											<a href="" class="nav__link" data-scroll-to="3">
 												команда
 											</a>
 										</li>
 										<li class="nav__item">
-											<a href="" class="nav__link">
+											<a href="" class="nav__link" data-scroll-to="4">
 												меню
 											</a>
 										</li>
 										<li class="nav__item">
-											<a href="" class="nav__link">
+											<a href="" class="nav__link" data-scroll-to="5">
 												отзывы
 											</a>
 										</li>
 										<li class="nav__item">
-											<a href="" class="nav__link">
+											<a href="" class="nav__link" data-scroll-to="6">
 												как мы работаем
 											</a>
 										</li>
 										<li class="nav__item">
-											<a href="" class="nav__link">
+											<a href="" class="nav__link" data-scroll-to="7">
 												контакты
 											</a>
 										</li>
@@ -1207,22 +1207,31 @@
 			<!-- -----------------Section fixed-menu-------------- -->
 			<ul class="fixed-menu">
 				<li class="fixed-menu__item">
-					<a href="#hero" class="fixed-menu__link active"></a>
+					<a href="#hero" class="fixed-menu__link active" data-scroll-to="0"></a>
 				</li>
 				<li class="fixed-menu__item ">
-					<a href="#burgers" class="fixed-menu__link"></a>
+					<a href="#burgers" class="fixed-menu__link" data-scroll-to="1"></a>
 				</li>
 				<li class="fixed-menu__item ">
-					<a href="#team" class="fixed-menu__link"></a>
+					<a href="#team" class="fixed-menu__link" data-scroll-to="2"></a>
 				</li>
 				<li class="fixed-menu__item ">
-					<a href="#menu" class="fixed-menu__link"></a>
+					<a href="#menu" class="fixed-menu__link" data-scroll-to="3"></a>
 				</li>
 				<li class="fixed-menu__item ">
-					<a href="#comments" class="fixed-menu__link"></a>
+					<a href="#comments" class="fixed-menu__link" data-scroll-to="4"></a>
 				</li>
 				<li class="fixed-menu__item ">
-					<a href="#map" class="fixed-menu__link"></a>
+					<a href="#map" class="fixed-menu__link" data-scroll-to="5"></a>
+				</li>
+				<li class="fixed-menu__item ">
+					<a href="#map" class="fixed-menu__link" data-scroll-to="6"></a>
+				</li>
+				<li class="fixed-menu__item ">
+					<a href="#map" class="fixed-menu__link" data-scroll-to="7"></a>
+				</li>
+				<li class="fixed-menu__item ">
+					<a href="#map" class="fixed-menu__link" data-scroll-to="8"></a>
 				</li>
 			</ul>
 			<!-- ---------------Section hamburger---------------- -->
@@ -1233,23 +1242,23 @@
 				</a>
 				<div class="fs-menu" >
 					<ul class="fs-menu__list">
-						<li class="fs-menu__item">
-						<a href="#hero" class="fs-menu__link">О нас</a>
+						<li class="fs-menu__item active">
+							<a href="#hero" class="fs-menu__link">О нас</a>
 						</li>
 						<li class="fs-menu__item">
-						<a href="#burgers" class="fs-menu__link">Бургеры</a>
+							<a href="#burgers" class="fs-menu__link">Бургеры</a>
 						</li>
 						<li class="fs-menu__item">
-						<a href="#team" class="fs-menu__link">Команда</a>
+							<a href="#team" class="fs-menu__link">Команда</a>
 						</li>
 						<li class="fs-menu__item">
-						<a href="#menu" class="fs-menu__link">Меню</a>
+							<a href="#menu" class="fs-menu__link">Меню</a>
 						</li>
 						<li class="fs-menu__item">
-						<a href="#comments" class="fs-menu__link">Отзывы</a>
+							<a href="#comments" class="fs-menu__link">Отзывы</a>
 						</li>
 						<li class="fs-menu__item">
-						<a href="#map" class="fs-menu__link">Контакты</a>
+							<a href="#map" class="fs-menu__link">Контакты</a>
 						</li>
 					</ul>
 				</div>
@@ -1273,22 +1282,14 @@
 			</script>
 			<!-------------------------------------->
 
-			<script type="text/javascript" src="fullpage.js"></script>
 
-			<!-- <script>
-				new fullpage('#fullpage', {
-				//options here
-				autoScrolling:true,
-				scrollHorizontally: true,
-				// scrollBar: true
-				});
-
-				//methods
-				fullpage_api.setAllowScrolling(false);
-			</script>  -->
+		
+		
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-		<script src="main.min.js"></script>
 		<script src="https://www.youtube.com/iframe_api"></script>
+		<script src="main.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
 	</div>
 </body>
 </html>
