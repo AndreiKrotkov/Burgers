@@ -11,11 +11,7 @@
 .slider-container {
   width: 100%;
   min-height: 650px;
-  // padding-top: 150px;
 
-  @include tablets {
-    // padding-top: 100px;
-  }
 }
 .slider__img {
   max-width: 100%;

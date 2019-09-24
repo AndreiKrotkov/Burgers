@@ -26,7 +26,6 @@
   }
 }
 
-
 .person__arrow {
   width: 8px;
   height: 8px;
@@ -61,7 +60,6 @@
   position: relative;
   overflow: hidden;
   height: rem(0px);
-  // transition: all 0.7s;
 
   @include tablets {
     padding: rem(0px);

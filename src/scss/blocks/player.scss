@@ -10,17 +10,6 @@
   }
 }
 
-// .player__splash {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background: url("../img/bg/player-splash.jpg") center center / cover no-repeat;
-//   cursor: pointer;
-// }
-
 .player__wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -54,7 +43,7 @@
   width: 0;
   height: 0;
   border: 11px solid transparent;
-  border-left-color: #d80808;
+  border-left-color: #f5f0f0;
   padding: 0;
   border-right-width: 0;
   background: transparent;
@@ -74,7 +63,7 @@
       width: 5px;
       top: 0;
       bottom: 0;
-      background: #eb0202;
+      background: #f5f0f0;
     }
     &:after {
       right: 0;
@@ -108,7 +97,7 @@
 }
 
 .player__playback-button {
-  background: #d40505;
+  background: #201f1f;
   border-radius: 50px;
   border: none;
   width: 12px;

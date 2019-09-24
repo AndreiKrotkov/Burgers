@@ -1,7 +1,6 @@
 // const links = document.querySelectorAll("[href^='#']");
 const links = document.querySelectorAll(".fs-menu__link");
 
-
 const V = 0.1;
 
 const overlayHamb = document.querySelector("#hamburgerOverlay");
@@ -247,21 +246,13 @@ const slides = document.querySelectorAll(".slider__item");
 
   function nextSlide() {
     goToSlide(currentSlide + 1);
-    // setAnimation(currentSlide, 'slideInRight');
   }
 
   function previousSlide() {
     goToSlide(currentSlide - 1);
-    // setAnimation(currentSlide, 'slideInRight');
   }
 
-  // function setAnimation (currentSlide, animation) {
-  //   slider[currentSlide].classList.add(animation);
-  //   setTimeout(() => {
-  //     slider[currentSlide].classList.remove(animation);
-  //   }, 1000);
-  // }
-
+  
   function goToSlide(n) {
     slides[currentSlide].classList.remove("showing");
     currentSlide = (n + slides.length) % slides.length;

@@ -52,16 +52,6 @@ task("svgIcon", () => {
   .pipe(dest('dist/images/icon'))
 });
 
-task("fullPageCss", () => {
-  return src('src/fullpage.min.css')
-  .pipe(dest('dist'))
-});
-task("fullPageJs", () => {
-  return src('src/fullpage.js')
-  .pipe(dest('dist'))
-});
-
-
 const styles = [
   'node_modules/normalize.css/normalize.css',
   'src/scss/main.scss'
@@ -103,27 +93,6 @@ task('script', () => {
   .pipe(reload({ stream: true }));
 })
 
-// task('icons', () => {
-//   return src('src/img/icons/*.svg')
-//   .pipe(svgo({
-//     plugins: [
-//       {
-//         removeAttrs: {
-//           attrs: '(fill|stroke|style|width|height|data.*)'
-//         }
-//       }
-//     ]
-//   }))
-//   .pipe(svgSprite({
-//     mode: {
-//       symbol: {
-//         sprite: '../sprite.svg'
-//       }
-//     }
-//   }))
-//   .pipe(dest('dist/images/icons'));
-// })
-
 task('server', function() {
     browserSync.init({
         server: {
@@ -137,21 +106,18 @@ task('watch', () => {
   watch('src/scss/**/*.scss', series('styles'));
   watch('src/**/*.html', series('copy:html'));
   watch('src/js/*.js', series('script'));
-  // watch('src/img/icons/*.svg', series('icons'));
  });
   
   
  task('default',
   series(
     'clean', 
-    parallel('copy:html', 'copy:img', 'fullPageCss', 'fullPageJs', 'fonts', "svg", 'svgIcon', 'styles', 'script'),
+    parallel('copy:html', 'copy:img', 'fonts', "svg", 'svgIcon', 'styles', 'script'),
     parallel('watch', 'server')
   )
  );
-  // 'icons'
  task('build',
   series(
     'clean',
-    parallel('copy:html', 'copy:img', 'fullPageCss', 'fullPageJs', 'fonts', "svg", 'svgIcon', 'styles', 'script',))
+    parallel('copy:html', 'copy:img', 'fonts', "svg", 'svgIcon', 'styles', 'script',))
  );
-// 'icons'

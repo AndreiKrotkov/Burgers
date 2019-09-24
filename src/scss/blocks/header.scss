@@ -19,6 +19,7 @@
 }
 .header__nav {
   margin-right: rem(15px);
+  margin-top: rem(10px);
 
   @include tablets {
     display: none;
