@@ -521,8 +521,8 @@ const sections = $(".section");
 const display = $(".maincontent");
 let inscroll = false;
 
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile();
+// const mobileDetect = new MobileDetect(window.navigator.userAgent);
+// const isMobile = mobileDetect.mobile();
 
 const countPositionPercent = sectionEq => {
   return `${sectionEq * -100}%`;
@@ -603,22 +603,22 @@ $("[data-scroll-to]").on("click", e => {
   performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
 });
 
-// разрешаем свайп на мобильниках
-if (isMobile) {
-  window.addEventListener(
-    "touchmove",
-    e => {
-      e.preventDefault();
-    },
-    { passive: false }
-  );
+// // разрешаем свайп на мобильниках
+// if (isMobile) {
+//   window.addEventListener(
+//     "touchmove",
+//     e => {
+//       e.preventDefault();
+//     },
+//     { passive: false }
+//   );
 
-  $("body").swipe({
-    swipe: (event, direction) => {
-      let scrollDirecrion;
-      if (direction === "up") scrollDirecrion = "next";
-      if (direction === "down") scrollDirecrion = "prev";
-      scrollViewport(scrollDirecrion);
-    }
-  });
-}
+//   $("body").swipe({
+//     swipe: (event, direction) => {
+//       let scrollDirecrion;
+//       if (direction === "up") scrollDirecrion = "next";
+//       if (direction === "down") scrollDirecrion = "prev";
+//       scrollViewport(scrollDirecrion);
+//     }
+//   });
+// }
